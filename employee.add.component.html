@@ -1,0 +1,8 @@
+﻿<form  #f="ngForm">
+FName :<input type="text" name="name1" [(ngModel)]= "FName" /><span>{{FName}}</span><br/>
+LName :<input type="text" name="name2"  [(ngModel)]= "LName"/><span>{{LName}}</span><br/>
+Salary :<input type="text" name="name3"  [(ngModel)]= "Salary" /><span>{{Salary}}</span><br/>
+    <input type="button" (click)="SaveEmployee(f)" value="Save" />
+    <input type="button" (click)="ShowCancel()" value="Cancel" />
+</form>
+

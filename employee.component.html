@@ -1,0 +1,14 @@
+﻿<input type="button" (click)="ClickMe()" value="Click Me" />
+<div *ngIf="!IsAddNew">
+    <employee-list #el (onAddNew)="ShowAddData()">employee list</employee-list>   
+</div>
+<div *ngIf="IsAddNew">
+
+    <employee-add (onSave)="ShowCancel()"></employee-add>
+   
+</div>
+
+
+
+
+

@@ -1,0 +1,8 @@
+﻿<!--<span *ngfor="let a of noArr">*</span>
+<input type="button" (click)="PlusRating()" value="+" />&nbsp; <input type="button" (click)="MinusRating()" value="-" />-->
+
+<span *ngFor="let x of noArr">
+    *
+</span>
+<input type="button" value="+" (click)="addRating()">
+<input type="button" value="-" (click)="remove()">

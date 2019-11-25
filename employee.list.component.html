@@ -1,0 +1,19 @@
+﻿
+
+<input type="button" (click)="ShowAdd()" value="Add" />
+    <table border="1">
+        <tr style="color:red">
+            <td>Name</td>
+           <td>LastName</td>
+            <td>Salary</td>
+            <td>Rating</td>
+            <td></td>
+        </tr>
+        <tr *ngFor="let a of Employees; let i=index" >
+            <td highlight='blue'>{{a.FName| name:a.LName }}</td>
+            <td>{{a.LName}}</td>
+            <td>{{a.Salary| currency}}</td>
+            <td>{{a.Rating}}</td>
+            <td ><employee-rating [myrating]=a.Rating (newRating)="Add(i)" (removeRating)="Remove(i)"  ></employee-rating></td>
+        </tr>
+</table>
